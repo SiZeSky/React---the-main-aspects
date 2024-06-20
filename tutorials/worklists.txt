@@ -1,0 +1,41 @@
+import React from "react"
+// Создали новый док Users
+class Users extends React.Component {
+    users = [
+        {
+            id: 1,
+            firstname: 'Bob',
+            lastname: 'Marley',
+            bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, id.',
+            age: 40,
+            isHappy: true
+        },
+        {
+            id: 2,
+            firstname: 'John',
+            lastname: 'Doe',
+            bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, id.',
+            age: 22,
+            isHappy: false
+        }
+    ] // Создали массив для хранения пользователей сайта. То, что объекты массива сделали в фигурные скобки, это означает, что этот элемент хранится в массиве в качестве данных.
+    render () {
+        if(this.users.length > 0)
+        return (<div>
+            {this.users.map((el) => (<div className="user" key={el.id}>
+                <h3>{el.firstname} {el.lastname},</h3>
+                <p>{el.age} years old;</p>
+                <p>{el.bio}</p>
+                <b>{el.isHappy == true ? 'Счастлив :)' : 'Грустный :('}</b>
+            </div>))}
+        </div>)// Метод .map() позволяет нам перебрать полностью массив. Этот метод принимает в качестве параметра некую функцию, которая как раз и указывает, каким методом будет перебраны все наши элементы в массиве. Еще раз, что мы тут создали: мы создали здесь массив, каждый элемента массива это данные или определенный объект, в котором прописаны его параметры и данные, далее в return мы обращаемся к этому массиву, перебираем его через метод map, каждый элемент у нас записывается в качестве переменной el, и каждый объект мы выводим в качестве тега div
+        else
+        return (<div className="user">
+            <h3>Пользователей нет</h3>
+        </div>)
+    }
+    }
+
+    export default Users
+
+    Дальше уже импортируем в App и там в теге main мы прописывали блоки с выводом пользователей
