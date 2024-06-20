@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React JS</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="app"></div>
+    
+    <script src="js/index.js" type="text/babel"></script>
+</body>
+</html>
+
+<!-- 
+    Чтобы у нас работал React, нужно подключить следующие библиотеки:
+    Вот эти скрипты
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"><script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+Берем отсюда: https://ru.legacy.reactjs.org/docs/cdn-links.html
+
+Этот скрипт
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+Берем отсюда: https://babeljs.io/docs/babel-standalone
+Это как способ подключать библиотеки напрямую ссылкой через сайт-раздатчик.
+Чтобы babel работал корреткно, нам нужно к нашему исходному JS - скрипту ввести следующее:
+<script src="js/index.js" type="text/babel"></script>
+Библиотека babel нужна для того, чтобы React данные трансформировались в стандартный JS код корректно
+Нужно также внутри body создать тег, внутрь которого и будет помещаться все содержимое, которое мы будем прописывать на основе React Js:
+    <div id="app"></div> Можно такой тег, например...
+-------------------------------Подключение через "npm"-------------------------------
+При помощи ссылок подключать React с доп библиотеками по типу Babel не совсем профессионально. Есть другой способ - при помощи пакетного менеджера "npm".
+НО! Он доступен, если у нас на компьютере имеется технология Node JS.
+Чтобы подключить React через npm, смотрим гайд:
+https://www.youtube.com/watch?v=h8psMIltC1Q&list=PLDyJYA6aTY1lpbNh66kFpF62QpJyzliT2&index=3&ab_channel=%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0itProger%2F%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5
+(таймлайн: 14:30)
+------------------------------Создание шаблонного проекта----------------------------
+Для начала, удалим все файлы, которые нам создали библиотеки, оставив только те, что мы создавали изначально (так как они сейчас нам не пригодятся)
+Вместо этого зайдем на сайт:
+https://ru.legacy.reactjs.org/docs/create-a-new-react-app.html
+Находим команду:
+npx create-react-app
+Нам нужно ввести ее в Terminal
+Если мы не хотим прописывать какое то дополнительное название для нашего и если мы хотим, чтобы все файлы были прописаны в нашей корневой папке (в нашем случае папка называется Welcome,JSX&Install), нам нужно после команды просто поставить точку:
+npx create-react-app .
+Если мы хотим, чтобы для нового проекта была создана новая папка, вместо точки пишем название для будущей папки
+Однако, если мы хотим создать проект в корневой папке, нужно, чтобы все файлы внутри были пустыми, поэтому дальше для урока создадим другую папку, на котором будет шаблонный проект
+-->
